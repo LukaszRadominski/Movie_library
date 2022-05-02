@@ -46,7 +46,9 @@ Program wykorzystuje:
     # budowanie klasy
     # dziedziczenie klasy 
     # metodę zwiększającą liczbę odtworzeń filmów 
-    # jedna wspólna listę wszytskich obiektów
+    # jedną wspólną listę wszytskich obiektów
     # iterację przez listę instancji klas
     # funkcje wbudowane isinstance() oraz is subclass()
     # polecenie input() wykorzystywane w funkcji wyszukiwania filmów
+    # moduł random
+    # moduł datetime
