@@ -46,7 +46,7 @@ print("BIBLOTEKA FILMÓW \n")
 
 # 4/  Wypełnienie biblioteię treścią. Po wyświetleniu serialu jako string pokazywane  np.: “The Simpsons S01E05” lub “Pulp Fiction (1994)”. 
 for i in one_list:
-    if isinstance(i, Serial) == False:
+    if not isinstance(i, Serial):
         print(f"{i.title},{i.year}")
     else:
         if i.season_number < 10: 
@@ -59,14 +59,14 @@ by_title = sorted(one_list, key=lambda movie: movie.title)
 
 def  get_movies():
     for i in by_title:
-        if isinstance(i, Serial) == False:
-            print(f"{i.title},{i.year},{i.type}")
+        if not isinstance(i, Serial):
+            print(f"{i.title},{i.year},{i.type},{i.num_of_plays}")
         else:
             pass
 
 def  get_series():
     for i in by_title:
-        if isinstance(i, Serial) == True:
+        if not isinstance(i, Serial):
             print(f"{i.title},{i.year},{i.type},{i.num_of_plays},{i.episode_number},{i.season_number} ")
         else:
             pass
@@ -119,10 +119,10 @@ d1 = today.strftime("%d.%m.%Y")
 def top_titles(how_many_titles):
     print(f"Najpopularniejsze filmy i seriale dnia {d1}:")
     for i in by_num_of_plays[:how_many_titles]:
-        if isinstance(i, Serial) == False:
+        if not isinstance(i, Serial):
             print(f"{i.title},{i.num_of_plays},{i.year},{i.type}")
         else:
-            print(f"{i.title},{i.num_of_plays},{i.year},{i.type},{i.episode_number},{i.season_number}")
+            print(f"{i.title},{i.num_of_plays},{i.year},{i.type},{i.season_number},{i.episode_number}")
 
 top_titles(3)
 
